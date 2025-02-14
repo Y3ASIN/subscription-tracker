@@ -1,4 +1,4 @@
-# subscription-tracker
+# Subscription Tracker
 
 To install dependencies:
 
