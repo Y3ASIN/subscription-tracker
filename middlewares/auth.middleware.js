@@ -17,9 +17,9 @@ export const authorize = async (req, res, next) => {
 
     const decoded = jwt.verify(token, JWT_SECRET);
     const user = await User.findById(decoded.userId);
-    if (!user) res.status(401).json({ message: "Unauthorize." });
+    if (!user) res.status(401).json({ message: "Unauthorized." });
 
-    res.user = user;
+    req.user = user;
 
     next();
   } catch (err) {

@@ -1,4 +1,5 @@
 {
   "eslint.nodePath": "/Users/ya/Documents/DevHub/bun/subscription-tracker",
-  "eslint.codeActionsOnSave.rules": null
+  "eslint.codeActionsOnSave.rules": null,
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)"
 }

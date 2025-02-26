@@ -4,10 +4,11 @@ import cookieParser from "cookie-parser";
 import { PORT } from "./config/env";
 import userRouter from "./router/user.router";
 import authRouter from "./router/auth.router";
-import subscriptionRouter from "./router/subscription.routes";
+import subscriptionRouter from "./router/subscription.router";
 import connectToDB from "./database/mongodb";
 import errorMiddleware from "./middlewares/error.middleware";
 import arcjetMiddleware from "./middlewares/arcjet.middleware";
+import workflowRouter from "./router/workflow.router";
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(arcjetMiddleware);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/subscriptions", subscriptionRouter);
+app.use("api/v1/workflows", workflowRouter);
 
 app.use(errorMiddleware);
 
